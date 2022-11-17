@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 :root {
   /* первичный цвет текста */
   --primary-text-color: #757575;
@@ -19,6 +29,14 @@ body {
   letter-spacing: 0.03em;
 }
 
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  outline: 2px solid tomato;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -34,6 +52,9 @@ body {
 }
 
 /* html + portfolio */
+.nav {
+  display: flex;
+}
 .logo-heder {
   color: #000000;
   text-decoration: none;
@@ -48,15 +69,28 @@ body {
 }
 /* html + portfolio */
 .nav-site {
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.nav-site .list:not(:last-child) {
+  margin-right: 50px;
 }
 /* html + portfolio */
 .nav-site .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--primary-title-color);
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  outline: 2px solid tomato;
 }
 .nav-site .link:hover,
 .nav-site .link:focus {
@@ -68,17 +102,28 @@ body {
 }
 
 .contact {
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
+
+.contact .list:not(:last-child) {
+  margin-right: 40px;
+}
 .contact .link {
-  /* font-family: 'Roboto'; */
-  font-weight: 500;
-  /* font-size: 14px; */
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  dont-weight: 500;
   line-height: 1.1;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 
   text-decoration: none;
+
+  outline: 2px solid tomato;
 }
 .contact .link:hover,
 .contact .link:focus {
@@ -86,46 +131,69 @@ body {
 }
 
 .hero {
+  height: 600px;
   background-color: #2f303a;
+  text-align: center;
+  outline: 2px solid tomato;
 }
 .hero-title {
-  /* font-family: 'Roboto'; */
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-top: 200px;
+
+  color: var(--white-color);
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--white-color);
 }
 
-.about > ul {
+.list {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .about-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
+
+  outline: 2px solid tomato;
 }
 .about-text {
+  margin-top: 0;
+  margin-bottom: 0;
+
   line-height: 1.71;
   color: var(--primary-text-color);
-}
-.section > ul {
-  list-style: none;
+
+  outline: 2px solid tomato;
 }
 
 .section-title {
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
   color: var(--primary-title-color);
 }
 
+.section-item:not(:last-child) {
+  margin-bottom: 30px;
+}
 .team {
   background-color: var(--secondary-background-color);
 }
-.team-titel {
+.team-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -134,6 +202,9 @@ body {
 }
 
 .team-text {
+  margin-top: 0;
+  margin-bottom: 0;
+
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -144,8 +215,13 @@ body {
   background-color: var(--white-color);
 }
 
+.team-card:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 /* html + portfolio */
 .footer {
+  height: 251px;
   background-color: #2f303a;
 }
 
@@ -168,6 +244,11 @@ body {
   font-weight: 400;
   line-height: 1.71;
 }
+
+.footer-list {
+  margin-top: 28px;
+  margin-bottom: 60px;
+}
 .address .map {
   color: var(--white-color);
   text-decoration: none;
@@ -185,7 +266,14 @@ body {
 /* Стили для portfolio.html */
 
 .filter {
+  margin-top: 0;
+  margin-bottom: 0;
   list-style: none;
+  outline: 2px solid tomato;
+}
+
+.filter-list:not(:last-child) {
+  margin-bottom: 8px;
 }
 .radio-button {
   color: var(--primary-title-color);
@@ -195,6 +283,8 @@ body {
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
+
+  outline: 2px solid tomato;
 }
 
 .radio-button:hover,
@@ -207,18 +297,32 @@ body {
 }
 
 .work {
+  margin-top: 0;
+  margin-bottom: 0;
   list-style: none;
+  outline: 2px solid tomato;
+}
+
+.work-list {
+  margin-bottom: 30px;
 }
 
 .work-title {
+  margin-top: 20px;
+  margin-bottom: 4px;
   color: var(--primary-title-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
+  outline: 2px solid tomato;
 }
 
 .work-link {
+  margin-top: 0;
+  margin-bottom: 0;
   color: var(--primary-text-color);
   font-size: 16px;
-  line-height: 1.88;
+
+  outline: 2px solid tomato;
 }
