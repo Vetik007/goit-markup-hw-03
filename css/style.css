@@ -112,8 +112,8 @@ body {
 .contact-list {
   margin-left: auto;
 }
-.nav-contact-list:not(:last-child) {
-  margin-right: 40px;
+.contact-list:not(:last-child) {
+  margin-right: 50px;
 }
 .nav-contact .link {
   display: block;
